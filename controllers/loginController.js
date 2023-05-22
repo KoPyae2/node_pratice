@@ -14,7 +14,7 @@ const handleLogin = async (req, res) => {
 
   const foundUser = await db.user.findOne({ where: { email } });
   if (!foundUser) {
-    return res.status(200).json({ "err_code":-1,"message": "This email is not register yet!" });
+    return res.status(200).json({ "err_code":-1,"err_msg": "This email is not register yet!" });
   }
 
   //   check password
